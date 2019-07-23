@@ -1,9 +1,11 @@
 import uuid from 'uuid';
 
-export const addTodo = text => ({
+export const addTodo = title => ({
   type: 'ADD_TODO',
-  id: uuid(),
-  text,
+  newTodo: {
+    id: uuid(),
+    title,
+  },
 });
 
 export const setVisibilityFilter = filter => ({

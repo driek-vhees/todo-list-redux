@@ -1,17 +1,16 @@
-const todos = (state = [], action) => {
-  switch (action.type) {
+const todos = (state = [], { type, id, newTodo }) => {
+  switch (type) {
     case 'ADD_TODO':
       return [
         ...state,
         {
-          id: action.id,
-          text: action.text,
+          ...newTodo,
           completed: false,
         },
       ];
     case 'TOGGLE_TODO':
       return state.map(todo => (
-        todo.id === action.id ? { ...todo, completed: !todo.completed } : todo));
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo));
     default:
       return state;
   }

@@ -9,8 +9,8 @@ import './index.css';
 
 const store = createStore(rootReducer, {
   todos: [
-    { id: uuid(), text: 'Create sample app with React-Hooks', completed: false },
-    { id: uuid(), text: 'Read about React-Hooks on NetNinja', completed: true },
+    { id: uuid(), title: 'Create sample app with React-Hooks', completed: false },
+    { id: uuid(), title: 'Read about React-Hooks on NetNinja', completed: true },
   ],
 });
 
